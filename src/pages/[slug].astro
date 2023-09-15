@@ -1,0 +1,82 @@
+---
+import Layout from "@/layouts/Layout.astro";
+export async function getStaticPaths() {
+	const posts = await Astro.glob("../markdowns/*.md");
+
+	return posts.map((post) => ({
+		params: {
+			slug: post.frontmatter.slug,
+		},
+		props: {
+			post,
+		},
+	}));
+}
+
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<Layout title={frontmatter.title}>
+	<header>
+		<a href="javascript:history.back()">&xlarr;</a>
+		<h1>
+			{frontmatter.title}
+		</h1>
+	</header>
+	<main>
+		<Content />
+	</main>
+	<footer>
+		<p>author : <a href="https://dshaw0004.netlify.com">dshaw0004</a></p>
+	</footer>
+</Layout>
+<style>
+	header {
+		display: flex;
+		align-items: center;
+		column-gap: 0.5em;
+	}
+	h1 {
+		flex-grow: 1;
+		text-align: center;
+		text-decoration: underline;
+		font-size: clamp(2.5vw, 2rem, 7.5vw);
+	}
+	header a {
+		font-size: 1.25em;
+		text-decoration: none;
+		font-weight: 900;
+		padding: 0 0.35em;
+		border-radius: 1ch;
+		height: 1.5rem;
+		line-height: 0.85;
+		color: inherit;
+		border: 1px solid currentColor;
+	}
+	@media screen and (max-width: 450px) {
+		header {
+			flex-direction: column;
+			align-items: start;
+		}
+		h1 {
+			margin-inline: auto;
+		}
+	}
+</style>
+<style>
+	main {
+		margin-block: 1em;
+		width: min(700px, 92%);
+		margin-inline: auto;
+	}
+</style>
+<style>
+	footer {
+		border-top: 1px solid #123456;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+		font-weight: 500;
+	}
+</style>

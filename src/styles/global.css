@@ -1,0 +1,31 @@
+.note {
+	background-color: yellow;
+	padding: 0.5ch 1ch;
+	box-sizing: border-box;
+	border: 0.5px double orangered;
+}
+.note::before {
+	content: "Note :";
+	display: inline-block;
+	color: orangered;
+}
+.warning {
+	background-color: orangered;
+	padding: 0.5ch 1ch;
+	box-sizing: border-box;
+	border: 0.5px double yellow;
+}
+.warning::before {
+	content: "⚠ warning :";
+	display: inline-block;
+	color: yellow;
+}
+
+.astro-code {
+	padding: 1ch;
+	box-sizing: border-box;
+}
+
+.note abbr {
+	text-decoration-color: transparent;
+}
