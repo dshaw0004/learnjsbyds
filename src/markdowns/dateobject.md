@@ -90,3 +90,16 @@ console.log(fullYear);
 ```
 
 <div class="warning"> Previously <code>getYear()</code> method was used in place of  <code>getFullYear()</code>. This <code>getYear()</code> does not support any more, if you use it you might not get right output. Use <code>getFullYear()</code> instead.</div>
+
+### getHours()
+
+`getHours()` method of the Date Object is used to get current hour as per user's system.
+It returns the current hour as a integer (0 to 23)
+
+Similar to `getMonths`, add +1 to it before displaying it.
+
+```js
+let hour = d.getHours();
+
+console.log(hour + 1);
+```
