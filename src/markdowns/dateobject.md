@@ -136,3 +136,16 @@ let second = d.getSeconds();
 
 console.log(second);
 ```
+
+### getMilliseconds()
+
+`getMilliseconds()` method of the Date Object is used to get current milliseconds as per user's system.
+It returns the current millisecond as a integer (0 to 999).
+
+```js
+let millisecond = d.getMilliseconds();
+
+console.log(millisecond);
+```
+
+<div class="note">If you don't know <b>1 second = 1000 milliseconds</b></div>
