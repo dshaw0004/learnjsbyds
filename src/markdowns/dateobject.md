@@ -107,10 +107,21 @@ console.log(hour + 1);
 ### getHours()
 
 `getHours()` method of the Date Object is used to get current hour as per user's system.
-It returns the current hour as a integer (0 to 23), i.e. it returns hours in **24 hours format**
+It returns the current hour as a integer (0 to 23), i.e. it returns hours in **24 hours format**.
 
 ```js
 let hour = d.getHours();
 
 console.log(hour);
+```
+
+### getMinutes()
+
+`getMinutes()` method of the Date Object is used to get current minute as per user's system.
+It returns the current hour as a integer (0 to 59).
+
+```js
+let minute = d.getMinutes();
+
+console.log(minute);
 ```
