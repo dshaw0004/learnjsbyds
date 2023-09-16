@@ -1,0 +1,7 @@
+{
+	"hosting": {
+		"public": "dist",
+		"site": "learnjsbyds",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	}
+}

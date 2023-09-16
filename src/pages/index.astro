@@ -1,5 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const posts = await Astro.glob("../markdowns/*.md");
+
+const allpages = posts.map((post) => {
+	return [post.frontmatter.slug, post.frontmatter.title];
+});
 ---
 
 <Layout title="Learn JS - by DS">
@@ -17,7 +23,15 @@ import Layout from "../layouts/Layout.astro";
 	<section class="links">
 		<ul>
 			<li><a href="/introduction">Introduction</a></li>
-			<li><a href="/comparisonoperator">Comparison Operators</a></li>
+			{
+				allpages.map((page) => {
+					return (
+						<li>
+							<a href={"/" + page[0]}>{page[1]}</a>
+						</li>
+					);
+				})
+			}
 		</ul>
 	</section>
 </Layout>
