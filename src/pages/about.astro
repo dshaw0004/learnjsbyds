@@ -1,35 +1,16 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-export async function getStaticPaths() {
-	const posts = await Astro.glob("../markdowns/*.md");
-
-	return posts.map((post) => ({
-		params: {
-			slug: post.frontmatter.slug,
-		},
-		props: {
-			post,
-		},
-	}));
-}
-
-const { Content, frontmatter } = Astro.props.post;
+import Readme from "~/README.md";
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title="about">
 	<header>
 		<a href="javascript:history.back()">&xlarr;</a>
-		<h1>
-			{frontmatter.title}
-		</h1>
+		<h1>About</h1>
 	</header>
 	<main>
-		<Content />
+		<Readme />
 	</main>
-	<footer>
-		<p>author : <a href="https://dshaw0004.netlify.com">dshaw0004</a></p>
-		<p><a href="/about">about</a></p>
-	</footer>
 </Layout>
 <style>
 	header {
@@ -69,15 +50,5 @@ const { Content, frontmatter } = Astro.props.post;
 		margin-block: 1em;
 		width: min(700px, 92%);
 		margin-inline: auto;
-	}
-</style>
-<style>
-	footer {
-		border-top: 1px solid #123456;
-	}
-	a {
-		color: inherit;
-		text-decoration: none;
-		font-weight: 500;
 	}
 </style>

@@ -125,3 +125,14 @@ let minute = d.getMinutes();
 
 console.log(minute);
 ```
+
+### getSeconds()
+
+`getSeconds()` method of the Date Object is used to get current second as per user's system.
+It returns the current second as a integer (0 to 59).
+
+```js
+let second = d.getSeconds();
+
+console.log(second);
+```
