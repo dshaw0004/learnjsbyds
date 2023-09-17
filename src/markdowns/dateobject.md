@@ -149,3 +149,42 @@ console.log(millisecond);
 ```
 
 <div class="note">If you don't know <b>1 second = 1000 milliseconds</b></div>
+
+### getDay()
+
+`getDay()` method of the Date Object is used to get current day of the week.
+It returns the current day as a integer (0 to 6) where `o` means **Sunday** and `6` means **Saturday**.
+
+If you are going to just display the number then add +1 to it other wise use array
+
+```js
+let day = d.getDay();
+
+console.log(day + 1);
+
+const nameOfDay = [
+	"Sunday",
+	"Monday",
+	"Tuesday",
+	"Wednesday",
+	"Thursday",
+	"Friday",
+	"Saturday",
+];
+
+console.log(nameOfDay[day]);
+```
+
+### getTime()
+
+`getTime()` method of the Date Object is used to get the number of milliseconds since **January 1, 1970 00:00:00** (also known as **_Epoch_**)
+
+```js
+let time = d.getTime();
+
+console.log(time);
+```
+
+<div class="note">For more infomation about <b>Epoch</b> visit this link :- <a href="https://en.wikipedia.org/wiki/Epoch">wikipedia of Epoch</a></div>
+
+more will be added later
