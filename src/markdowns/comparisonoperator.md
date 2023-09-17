@@ -67,13 +67,15 @@ If the first value is less then it returns `true` else it returns `false`.
 "Tiger" < "tiger"; //returns true
 ```
 
-### Equals To Operator ( == )
+### Equal To Operator ( == )
 
 Denoted by two equals to symbols (`==`).
 This operator checks whether the first value is equals to the second value or not.
 If both values are equal then it returns `true` otherwise it returns `false`
 
 <div class="warning"> `==` and `=`both  are different. don't be mixed up them. </div>
+
+#### Example
 
 ```javascript
 69 == 69; // returns true
@@ -91,3 +93,57 @@ If both values are equal then it returns `true` otherwise it returns `false`
 Therefore, "tiger" is greater than "Tiger".
 </p>
 </div>
+
+### Not Equal Operator ( != )
+
+Denoted by one exclamation and a equal to symbols (`!=`).
+This comparison operator is just opposite of `Equal to` operator it returns `true` if both values are not same otherwise it returns false.
+
+#### Example
+
+```javascript
+69 != 69; // returns false
+169 != 196; // returns true
+
+69 != "69"; // returns false
+
+"Tiger" != "tiger"; //returns true
+"mango" != "mango"; // retuns false
+```
+
+### Greater or Equal to Operator ( >= )
+
+Denoted by greater then or left angular bracket following a equal to symbole (`>=`). It Checks if the first value is greater than or equal to the second value or not.
+If the first value is greater then or equal to the second value, it returns `true` else it returns `false`.
+
+#### Example
+
+```javascript
+169 >= 69; // returns true
+420 >= 420; // returns true
+
+34 >= 25; // returns false
+
+"whale" >= "shark"; // returns true
+"car" >= "truck"; // returns false
+
+"Tiger" >= "Tiger"; //returns true
+```
+
+### Less or Equal To Operator ( <= )
+
+Denoted by less then or left angular bracket following a equal to symbol (`<`). It Checks if the first value is lesser than or equal to the second value or not.
+If the first value is less then or equal to the second value, it returns `true` else it returns `false`.
+
+#### Example
+
+```javascript
+308 <= 420; // returns true
+123 <= 123; // returns true
+169 <= 69; // returns false
+
+"whale" <= "shark"; // retunrs false
+"car" <= "truck"; // returns true
+
+"tiger" <= "tiger"; //returns true
+```

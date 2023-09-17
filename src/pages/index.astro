@@ -26,10 +26,12 @@ const allpages = posts.map((post) => {
 			<li><a href="/introduction">Introduction</a></li>
 			{
 				allpages.map((page) => {
-					return (
+					return page[0] != "introduction" ? (
 						<li>
 							<a href={"/" + page[0]}>{page[1]}</a>
 						</li>
+					) : (
+						""
 					);
 				})
 			}
