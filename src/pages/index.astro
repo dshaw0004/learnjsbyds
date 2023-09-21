@@ -10,32 +10,46 @@ const allpages = posts.map((post) => {
 ---
 
 <Layout title="Learn JS - by DS">
-	<h1>Learn JS</h1>
-	<section>
-		<h2>Introduction to JavaScript</h2>
-		<p>
-			JavaScript is a lightweight, interpreted, object-oriented programming
-			language. It is one of the three core technologies of the World Wide Web,
-			along with HTML and CSS. JavaScript is used to add interactivity to web
-			pages, such as making buttons clickable or creating animations. It can
-			also be used to build web applications, such as games or dashboards.
-		</p>
-	</section>
-	<section class="links">
-		<ul>
-			<li><a href="/introduction">Introduction</a></li>
-			{
-				allpages.map((page) => {
-					return page[0] != "introduction" ? (
-						<li>
-							<a href={"/" + page[0]}>{page[1]}</a>
-						</li>
-					) : (
-						""
-					);
-				})
-			}
-		</ul>
-	</section>
+	<main>
+		<h1>Learn JS</h1>
+		<section>
+			<h2>Introduction to JavaScript</h2>
+			<p>
+				JavaScript is a lightweight, interpreted, object-oriented programming
+				language. It is one of the three core technologies of the World Wide
+				Web, along with HTML and CSS. JavaScript is used to add interactivity to
+				web pages, such as making buttons clickable or creating animations. It
+				can also be used to build web applications, such as games or dashboards.
+			</p>
+		</section>
+		<section class="links">
+			<ul>
+				<li><a href="/introduction">Introduction</a></li>
+				{
+					allpages.map((page) => {
+						return page[0] != "introduction" ? (
+							<li>
+								<a href={"/" + page[0]}>{page[1]}</a>
+							</li>
+						) : (
+							""
+						);
+					})
+				}
+			</ul>
+		</section>
+	</main>
 	<Footer />
 </Layout>
+<style>
+	h1 {
+		margin-block: 1em;
+	}
+	main {
+		width: min(700px, 92%);
+		margin-inline: auto;
+	}
+	ul {
+		list-style-position: inside;
+	}
+</style>
